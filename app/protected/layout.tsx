@@ -17,6 +17,14 @@ export default function ProtectedLayout({
           <div className="w-full max-w-5xl flex justify-between items-center p-3 px-5 text-sm">
             <div className="flex gap-5 items-center font-semibold">
               <Link href={"/"}>Next.js Supabase Starter</Link>
+              <nav className="flex items-center gap-4 text-sm">
+                <Link href={"/protected"} className="hover:text-foreground/80">
+                  Dashboard
+                </Link>
+                <Link href={"/protected/bot-config"} className="hover:text-foreground/80">
+                  Bot Config
+                </Link>
+              </nav>
               <div className="flex items-center gap-2">
                 <DeployButton />
               </div>

@@ -46,7 +46,8 @@ export function BotConfigForm() {
 
       const data: SendBotConfigResponse = await res.json();
       setResponse(data);
-    } catch {
+    } catch (error) {
+      console.error(error);
       setResponse({
         success: false,
         message: 'Failed to send bot configuration'
